@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form Styling</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family:'Roboto Condensed', sans-serif;
+        box-sizing: border-box;
+        margin:0px;
+        padding:0px;
+        /*
+        -May want to add "border-box for "box-sizing so padding does not affect width
+        -Reset margin and padding
+       */
+      }
+
+
+
+      body {
+        min-height: 100vh;
+        height: 100%;
+
+        background-image: linear-gradient(to right top, #d5b969, #f1aa7e, #f7a19f, #e7a3bf, #c9aad3, #b7a5d8, #a0a2db, #82a0dd, #6a91e3, #5181e8, #3471eb, #0460ed);        /*
+          -Background color is #344a72
+        */
+      }
+
+
+
+      a {
+        text-decoration: none;
+        /*
+        Underlined links are ugly :)
+       */
+      }
+
+      #container {
+        color: #dddddd;
+        margin:auto;
+        margin-top:100px;
+        max-width: 500px;
+        padding: 10px;
+        /*
+        -Remember, margin: auto on left and right will center a block element
+        -I would also set a "max-width" for responsiveness
+        -May want to add some padding
+        */
+      }
+
+
+      svg{
+        height:30px;
+        width:30px;
+        max-height: 25px;
+      }
+
+
+      .form-wrap {
+        padding: 20px;
+        background-color:rgb(255 255 255 /20% );
+        border: none;
+        border-radius: 20px 0px 20px 0px;
+        /*
+          This is the white area around the form and heading, etc
+        */
+      }
+
+      .form-wrap h1,
+      .form-wrap p {
+        color: #fff;
+        text-align: center;
+        margin:25px 25px 0px 25px;
+        /*
+          May want to center these
+        */
+      }
+
+      .form-wrap .form-group {
+        /*margin-top: 10px;*/
+        margin: 10px 0 10px 0;
+        /*padding:10px;*/
+        /*margin: 10px;*/
+
+        /*
+          Each label, input is wrapped in .form-group
+        */
+      }
+
+      .form-wrap .form-group label {
+        letter-spacing:1px;
+        padding-bottom:15px;
+        display: block;
+        /*
+          Label should be turned into a block element
+        */
+      }
+
+      .form-wrap .form-group input {
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px 10px;
+        transition: 0.3s all ease-in-out;
+        /*
+          Inputs should reach accross the .form-wrap 100% and have some padding
+        */
+      }
+
+
+      .form-wrap button {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        border-radius: 40px;
+        padding:10px 10px;
+        margin: auto;
+        width: 200px;
+        height: 40px;
+        color: white;
+        background: rgb(255 117 24 /70%);
+        display: block;
+        margin-top: 20px;
+        transition: 0.2s all ease-in-out;
+        /*
+          Button should wrap accross 100% and display as block
+          Background color for button is #49c1a2
+        */
+      }
+
+      .form-wrap button:hover {
+        transform: translateY(-2px);
+        color: #b7a5d8;
+        background: #7c52e8;
+        /*
+          Hover background color for button is #37a08e
+        */
+      }
+
+      .form-wrap .bottom-text {
+        font-size: 12px;
+        margin-bottom: 5px;
+        /*
+          Bottom text is smaller
+        */
+      }
+
+      footer {
+        color: #dddddd;
+        text-align: center;
+        margin-top: 10px;
+        /*
+        Should be centered
+       */
+      }
+
+      a {
+        color: #552ac0;
+        transition: 0.2s all ease-in-out;
+
+        /*
+          Footer link color is #49c1a2
+        */
+      }
+      a:hover{
+        color: #9b67ff;
+      }
+
+    input:hover {
+      transform: translateY(-3px);
+      box-shadow:0px 15px 18px #b89bf3;
+    }
+
+
+    </style>
+  </head>
+  <body>
+  <div id="container">
+      <div class="form-wrap">
+        <h1>Sign Up
+          <span class='icon'>
+            <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='currentColor'
+                    class='w-6 h-6'>
+              <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33'
+              />
+            </svg></h1>
+        <p>It's free and only takes a minute</p>
+        <form>
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" name="firstName" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="lastName" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="@gmail.com" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" name="pasword2" id="password2"  />
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <p class="bottom-text">
+            By clicking the Sign Up button, you agree to our
+            <a href="#">Terms & Conditions</a> and
+            <a href="#">Privacy Policy</a>
+          </p>
+        </form>
+    </div>
+    <footer>
+      <p>Already have an account? <a href="#">Login Here</a></p>
+    </footer>
+  </body>
+</html>
